@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NavigationTest</string>
+    <string name="Payment">Payment History</string>
+    <string name="Text">ScrollView_text</string>
+    <string name="Return">Previous</string>
+    <string name="cart">cart</string>
+
+</resources>

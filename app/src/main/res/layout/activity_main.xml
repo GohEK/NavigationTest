@@ -22,35 +22,48 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <SearchView
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/payment_history"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/oval_rectangle"
+        app:queryHint="Search your order"/>
+
     <ScrollView
         android:id="@+id/nestedScrollView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/payment_history">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_below="@id/search"
+        android:layout_above="@id/bottom_navigation">
+
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/Text"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_gravity="top"
+                android:background="#F5B700"
+                android:gravity="center"
+                android:text="@string/date"
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/Text"
-                app:layout_constraintBottom_toTopOf="@+id/nestedScrollView"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/payment_history" />
-
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:background="@drawable/oval_rectangle"
+                android:text="@string/order_summary"
+                android:textStyle="bold" />
         </LinearLayout>
     </ScrollView>
 
@@ -62,8 +75,7 @@
         app:itemBackground="@color/colorYellow"
         app:itemIconTint="@drawable/selector"
         app:itemTextColor="@drawable/selector"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/menu_navigation" />
+        app:menu="@menu/menu_navigation"/>
 
     <ImageView
         android:id="@+id/imageView"
@@ -72,7 +84,8 @@
         android:layout_marginStart="30dp"
         android:contentDescription="@string/Return"
         app:srcCompat="@drawable/ic_arrow"
-        tools:ignore="VectorDrawableCompat" />
+        tools:ignore="VectorDrawableCompat"
+        android:layout_marginLeft="30dp"/>
 
     <ImageView
         android:id="@+id/imageView2"
@@ -82,6 +95,6 @@
         android:layout_marginLeft="224dp"
         android:contentDescription="@string/cart"
         app:srcCompat="@drawable/ic_cart"
-        tools:ignore="VectorDrawableCompat" />
+        tools:ignore="VectorDrawableCompat"/>
 
 </RelativeLayout>

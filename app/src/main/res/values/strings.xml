@@ -4,5 +4,8 @@
     <string name="Text">ScrollView_text</string>
     <string name="Return">Previous</string>
     <string name="cart">cart</string>
+    <string name="text">Profile</string>
+    <string name="date">payment date</string>
+    <string name="order_summary">order_summary</string>
 
 </resources>
